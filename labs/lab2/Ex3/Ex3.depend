@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1319130845 source:/home/nathan/Dropbox/university/_final_year/c++/labs/lab2/Ex3/main.cpp
+	<iostream>
+	<vector>
+	<iterator>
+	<algorithm>
+

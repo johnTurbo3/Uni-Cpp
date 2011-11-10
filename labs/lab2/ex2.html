@@ -1,0 +1,125 @@
+<html>
+
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+<title>ex2</title>
+</head>
+
+<body LINK="#0000ff" VLINK="#800080">
+
+<p><strong>Exercise 1</strong><br>
+<br>
+Write a program that computes and prints all the prime numbers below 100. Reminder: prime
+numbers are integers greater than one with no factors other than<br>
+themselves and one. </p>
+
+<hr>
+
+<p><strong>Exercise 2</strong></p>
+
+<p>Write a program that accepts seat reservations and cancellations for a single
+performance in a theatre, accepting requests from the keyboard and printing information to
+the screen. The theatre has 50 seats, numbered from 0 to 49. The program should operate as
+follows:- </p>
+
+<p>The program should loop, each loop performing the following steps: 
+
+<ol>
+  <li>Prompt the user to type either 'a' or 'c' to add or cancel a reservation.</li>
+  <li>Read keyboard input. If neither 'a' nor 'c' is entered, prompt again.</li>
+  <li>If 'a' is entered, request the number of seats required. If enough seats are still
+    available, identify the seat(s) to be reserved. Always use the lowest numbered seats
+    available. Print the numbers of the seats allocated along with a reservation number, so
+    that the reservation can be identified later for the purposes of cancellation. If there
+    are not enough seats, print an error message.</li>
+  <li>If 'c' is entered, request the reservation number and locate the seats reserved under
+    that reservation number. Mark the seats as available again. If the reservation is not
+    found, print an error message. </li>
+</ol>
+
+<p>Optional extra: when a reservation added, first check whether the seats can be reserved
+as a single contiguous block. </p>
+
+<hr>
+
+<p><strong>Exercise 3</strong></p>
+
+<p>Write a program to multiply a vector by a matrix. As an example, try to compute </p>
+
+<pre>   (2 3 4) ( 8)
+   (5 6 7) ( 9)
+           (10)</pre>
+
+<p>for which the correct answer is </p>
+
+<pre>    ( 83)
+    (164)</pre>
+
+<p>Use integer or floating point arithmetic as you prefer. </p>
+
+<p>NOTE: write the program so that it is easy to change the size of the matrix &amp;
+vector, i.e. use <tt>for</tt> loops, and <tt>#define</tt> or <tt>const</tt> declarations
+to specify the dimensions. </p>
+
+<hr>
+
+<p><strong>Exercise 4</strong></p>
+
+<p>Implement a doubly-linked list module using the Structures in the notes (see <a
+href="../week2sup.pdf">week 2 supplementary</a>). Change the type of <tt>DataT</tt> to a
+string type able to hold strings up to 20 characters long. Rename <tt>IntLLT</tt> to <tt>StrLLT</tt>.
+</p>
+
+<p>Implement the constructor and destructor functions </p>
+
+<pre>  StrLLT Cons(void);</pre>
+
+<p>and </p>
+
+<pre>  void Dest ( StrLLT list );</pre>
+
+<p>Add an additional function </p>
+
+<pre>  void Add ( StrLLT list, char *s );</pre>
+
+<p>that adds a link to the start of the <tt>list</tt> with string <tt>s</tt> as its data.
+Hint: use <tt>malloc()</tt> to create the new link. </p>
+
+<p>Then write a function </p>
+
+<pre>  void PrintList ( StrLLT list );</pre>
+
+<p>to print all the strings contained in the list. </p>
+
+<p>Write a small <tt>main()</tt> function to test your functions, such as </p>
+
+<pre>   int main ( int argc, char *argv[] )
+   {
+      StrLLT list;
+
+      /* construct empty list of strings */
+      list = Cons();
+
+      /* add some strings to the list */
+      Add ( list, &quot;Fluff&quot; );
+      Add ( list, &quot;badger&quot; );
+      Add ( list, &quot;boa constrictor&quot; );
+
+      /* print contents of list */
+      PrintList ( list );
+
+      /* destroy list */
+      Dest ( list );
+
+      /* we've finished */
+      return 0;
+   }</pre>
+
+<p>which should print out </p>
+
+<pre>boa constrictor
+badger
+Fluff</pre>
+</body>
+</html>
